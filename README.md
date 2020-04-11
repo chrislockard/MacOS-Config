@@ -1,2 +1,2 @@
-# setup
-Sets up my environment via Ansible
+# My Config
+There are many like it, but this one is mine.

@@ -1,0 +1,4 @@
+- name: install emacs on mac
+  homebrew:
+    name: emacs-plus
+    state: present

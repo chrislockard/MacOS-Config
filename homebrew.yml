@@ -1,0 +1,45 @@
+---
+- name: Install MacOS Packages
+  hosts: localhost
+  become: false
+  vars:
+    brew_cask_packages:
+      - alfred
+      - alt-tab
+      - arduino
+      - chrysalis
+      - docker
+      - eloston-chromium
+      - font-droid-sans-mono-for-powerline
+      - font-fira-code
+      - font-fira-mono
+      - font-fira-mono-for-powerline
+      - font-ibm-plex
+      - font-iosevka
+      - font-roboto-mono-for-powerline
+      - font-source-code-pro
+      - insomnia
+      - nvalt
+      - qlcolorcode
+      - qlmarkdown
+      - spotify
+      - suspicious-package
+      - vlc
+      - wireshark
+      - zenmap
+    brew_packages:
+      - curl
+    upgrade_homebrew_packages: true
+
+
+  pre_tasks:
+    - name: Ensure Homebrew is installed
+      stat:
+        path: /usr/local/bin/brew
+      register: homebrew_check
+
+#  tasks:
+#    - homebrew:
+#        name: bat
+#        state: latest
+#        update_homebrew: yes

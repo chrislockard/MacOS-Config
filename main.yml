@@ -1,0 +1,6 @@
+---
+- hosts: local
+  vars:
+    brewfile: ./Brewfile
+  roles:
+    - homebrew
